@@ -1,0 +1,42 @@
+﻿@model BookLibrary.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+
+<h3>Book Detail</h3>
+<hr />
+
+
+<div class="border">
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th>@Html.DisplayNameFor(m => m.Author)</th>
+            <th>@Html.DisplayNameFor(m => m.Price)</th>
+            <th></th>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Model.Name
+            </td>
+            <td>
+                @Model.Author
+            </td>
+            <td>
+                @Model.Price
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm btn-success">Edit</a>
+                <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+
+
+    </table>
+</div>
+
+
